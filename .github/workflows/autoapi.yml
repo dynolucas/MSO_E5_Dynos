@@ -10,7 +10,7 @@ on:
   #  branches: 
   #    - master
   schedule:
-    - cron: '0 * * * *'
+    - cron: '* 4 * * *'
   workflow_dispatch:
   watch:
     types: [started]
@@ -61,8 +61,8 @@ jobs:
         rm -f Secret.txt
     - name: Commit #Upload a new refresh_token to the repository
       run: |
-          git config --global user.name "isyzv"
-          git config --global user.email "isyziv@ms.isyziv.eu.org"
+          git config --global user.name "dynolucas"
+          git config --global user.email "zali.sobri@gmail.com"
           git add .
           git commit -m "Auto-commit changes"
           git push origin HEAD:main
